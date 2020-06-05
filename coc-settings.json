@@ -1,0 +1,11 @@
+{
+  "suggest.snippetIndicator": "►",
+  "suggest.triggerAfterInsertEnter": true,
+  "snippets.userSnippetsDirectory": "/users/vikks/.vim/UltiSnips",
+  "snippets.ultisnips.enable": true,
+  "snippets.extends":
+    {
+      "javascriptreact": ["javascript"]
+    },
+  "diagnostic.refreshAfterSave": true
+}

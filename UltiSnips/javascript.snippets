@@ -1,0 +1,98 @@
+# npm i -g convert-snippets
+# convert-snippets vscode_snippets ultisnippets.snippets
+# open any javascript file and type: UltiSnipsEdit and paste here.
+
+snippet vrnsc "RN-styled-component"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+class $1 extends Component {
+ static propTypes = {};
+ render() {
+   return <Container>$2</Container>;
+	 }
+}
+
+export default $1;
+
+const Container = styled.View\`
+ background: red;
+\`;
+endsnippet
+
+snippet veid "export default from index "
+export { default as $1 } from "./$1";
+endsnippet
+
+snippet vei "export constants from index "
+export { $1 } from "./$1";
+endsnippet
+
+snippet vjsxv "JSX component styled"
+<$1></$1>
+const $1 = styled.View``;
+endsnippet
+
+snippet vjsxt "JSX component styled"
+<$1></$1>
+const $1 = styled.Text``;
+endsnippet
+
+
+snippet vred "Reducer init"
+import PropTypes from "prop-types";
+import {
+  createReducer,
+  withPropTypes
+} from "../../../helpers/reducerUtilities";
+import {  } from "./Types";
+
+const $1Schema = PropTypes.shape({
+});
+
+const initialState = {
+};
+
+const $2 = (state, action) => {
+ const {$0} = action;
+ return state;
+}
+
+const $1Reducer = createReducer(initialState, {
+  $3: withPropTypes($2, $1Schema)(
+    $2
+  )
+});
+
+export { $1Reducer };
+endsnippet
+
+snippet vsaga "saga init"
+import { takeEvery, put, call } from "redux-saga/effects";
+import {$1Types} from "./Types";
+import {} from "./Actions";
+import {$1} from "../../../services/Firebase";
+import ReduxStore from "../../../state/ReduxStore";
+
+function* $2(action) {
+  const {} = action;
+
+  try {
+	$0
+  } catch (error) {
+    _handleError(error);
+  }
+}
+
+export default function* watch$1() {
+  yield takeEvery($1Types, $2);
+}
+
+const _handleError = error => {
+  console.log("(Name goes here) SAGA", error);
+};
+
+const _handleException = exception => {
+  console.log("(name goes here) saga", exception);
+};
+endsnippet
