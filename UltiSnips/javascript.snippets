@@ -6,7 +6,8 @@ snippet vrnsc "RN-styled-component"
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-class $1 extends Component {
+
+class ${1:`!v expand('%:t:r')`} extends Component {
  static propTypes = {};
  render() {
    return <Container>$2</Container>;
@@ -28,17 +29,13 @@ snippet vei "export constants from index "
 export { $1 } from "./$1";
 endsnippet
 
-snippet vjsxv "JSX component styled"
-<$1></$1>
-const $1 = styled.View``;
+snippet vsc "Styled-Component JSX"
+
+<${1:View}>$3</$1>
+const $1 = styled.${2:View}\`$4\`
+
 endsnippet
-
-snippet vjsxt "JSX component styled"
-<$1></$1>
-const $1 = styled.Text``;
-endsnippet
-
-
+	
 snippet vred "Reducer init"
 import PropTypes from "prop-types";
 import {
@@ -96,3 +93,29 @@ const _handleException = exception => {
   console.log("(name goes here) saga", exception);
 };
 endsnippet
+
+snippet vdfl "display center flex"
+  display: flex;
+  align-items: center;
+  justify-content: center;
+endsnippet
+
+snippet vrnfc "RN-functional-styled-component"
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const ${1:`!v expand('%:t:r')`} = () => {
+	return <Container>$2</Container>;
+}
+
+$1.propTypes = {};
+
+export default $1;
+
+const Container = styled.View\`
+ flex: 1;
+ background: red;
+\`;
+endsnippet
+

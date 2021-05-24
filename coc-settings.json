@@ -3,9 +3,30 @@
   "suggest.triggerAfterInsertEnter": true,
   "snippets.userSnippetsDirectory": "/users/vikks/.vim/UltiSnips",
   "snippets.ultisnips.enable": true,
-  "snippets.extends":
-    {
+  "snippets.extends": {
       "javascriptreact": ["javascript"]
     },
-  "diagnostic.refreshAfterSave": true
+  "tailwindCSS.includeLanguages": {
+    "*.html.erb": "html"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.validate":true,
+  "tailwindCSS.headwind.runOnSave": true,
+  "tailwindCSS.headwind.removeDuplicates": true,
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "dart"
+  ],
+  "diagnostic.checkCurrentLine": true,
+  "solargraph.formatting": true,
+  "solargraph.diagnostics": true,
+  "solargraph.completion": true,
+  "solargraph.hover": true,
+  "languageserver": {
+    "steep":{
+      "command": "bundle",
+      "args": ["exec", "steep", "langserver"],
+      "filetypes": ["ruby", "rbs", "ruby-signature", "steep"]
+    },
+  }
 }
