@@ -23,10 +23,13 @@
   "solargraph.completion": true,
   "solargraph.hover": true,
   "languageserver": {
-    "steep":{
-      "command": "bundle",
-      "args": ["exec", "steep", "langserver"],
-      "filetypes": ["ruby", "rbs", "ruby-signature", "steep"]
-    },
+    "sorbet": {
+      "command": "srb",
+      "args": ["tc", "--lsp", "--enable-all-experimental-lsp-features"],
+      "filetypes": ["ruby"],
+      "rootPatterns": ["sorbet/config"],
+      "initializationOptions": {},
+      "settings": {}
+    }
   }
 }
