@@ -21,15 +21,5 @@
   "solargraph.formatting": true,
   "solargraph.diagnostics": true,
   "solargraph.completion": true,
-  "solargraph.hover": true,
-  "languageserver": {
-    "sorbet": {
-      "command": "srb",
-      "args": ["tc", "--lsp", "--enable-all-experimental-lsp-features"],
-      "filetypes": ["ruby"],
-      "rootPatterns": ["sorbet/config"],
-      "initializationOptions": {},
-      "settings": {}
-    }
-  }
+  "solargraph.hover": true
 }
